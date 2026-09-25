@@ -1,14 +1,16 @@
-
 <!DOCTYPE html>
 <html lang="pl">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>LayerLab — Druk 3D</title>
 
-    <meta name="description"
-          content="LayerLab — sklep z produktami wykonanymi w technologii druku 3D">
+    <meta
+        name="description"
+        content="LayerLab — sklep z produktami wykonanymi w technologii druku 3D"
+    >
 
     <style>
 
@@ -346,6 +348,7 @@
             display: flex;
             gap: 12px;
             margin-top: 15px;
+            flex-wrap: wrap;
         }
 
         .gallery-thumb {
@@ -520,6 +523,7 @@
 </head>
 
 <body>
+
 
 <!-- =====================================================
      HEADER
@@ -715,36 +719,66 @@
 
         <div class="products">
 
+
+            <!-- ================= PRODUKT 1 ================= -->
+
             <div
                 class="product"
                 onclick="showPage('product-hook');"
             >
 
-                <!-- POPRAWIONA ŚCIEŻKA DO ZDJĘCIA -->
-
                 <img
-                    src="./zdjęcie1.jpg"
-                    alt="Wspornik ścienny 3D"
+                    src="./wspornik.jpg"
+                    alt="IKEA SKADIS Wieszak 3D"
                     class="product-image"
                     onerror="this.style.display='none';"
                 >
 
                 <h3>
-                    Wspornik ścienny 3D
+                    IKEA SKADIS Wieszak 3D
                 </h3>
 
                 <p>
-
-                    Praktyczny wspornik wykonany
-                    z dbałością o szczegóły.
-
+                    Praktyczny i solidny element
+                    wykonany z wykorzystaniem technologii druku 3D.
                 </p>
 
                 <div class="price">
-                    19.99 zł
+                    39,99 zł
                 </div>
 
             </div>
+
+
+            <!-- ================= PRODUKT 2 ================= -->
+
+            <div
+                class="product"
+                onclick="showPage('product-kukirin');"
+            >
+
+                <img
+                    src="./kukirin-g4.jpg"
+                    alt="KuKirin G4"
+                    class="product-image"
+                    onerror="this.style.display='none';"
+                >
+
+                <h3>
+                    KuKirin G4
+                </h3>
+
+                <p>
+                    Produkt wykonany w technologii druku 3D,
+                    inspirowany modelem KuKirin G4.
+                </p>
+
+                <div class="price">
+                    39,99 zł
+                </div>
+
+            </div>
+
 
         </div>
 
@@ -786,34 +820,32 @@
 
         <div class="products">
 
+
+            <!-- ================= PRODUKT 1 ================= -->
+
             <div
                 class="product"
                 onclick="showPage('product-hook');"
             >
 
-                <!-- POPRAWIONA ŚCIEŻKA -->
-
                 <img
                     src="./wspornik.jpg"
-                    alt="Wspornik ścienny 3D"
+                    alt="IKEA SKADIS Wieszak 3D"
                     class="product-image"
                     onerror="this.style.display='none';"
                 >
 
                 <h3>
-                    IKEA SKADIS
-Wieszk 3D
+                    IKEA SKADIS Wieszak 3D
                 </h3>
 
                 <p>
-
-                    Solidny i praktyczny wspornik wykonany
+                    Solidny i praktyczny element wykonany
                     z wykorzystaniem technologii druku 3D.
-
                 </p>
 
                 <div class="price">
-                    19.99 zł
+                    39,99 zł
                 </div>
 
                 <div class="buttons">
@@ -830,6 +862,49 @@ Wieszk 3D
 
             </div>
 
+
+            <!-- ================= PRODUKT 2 ================= -->
+
+            <div
+                class="product"
+                onclick="showPage('product-kukirin');"
+            >
+
+                <img
+                    src="./kukirin-g4.jpg"
+                    alt="KuKirin G4"
+                    class="product-image"
+                    onerror="this.style.display='none';"
+                >
+
+                <h3>
+                    KuKirin G4
+                </h3>
+
+                <p>
+                    Produkt wykonany w technologii druku 3D,
+                    inspirowany modelem KuKirin G4.
+                </p>
+
+                <div class="price">
+                    39,99 zł
+                </div>
+
+                <div class="buttons">
+
+                    <a
+                        href="#"
+                        class="btn primary"
+                        onclick="event.stopPropagation(); showPage('product-kukirin'); return false;"
+                    >
+                        Zobacz produkt →
+                    </a>
+
+                </div>
+
+            </div>
+
+
         </div>
 
     </div>
@@ -838,7 +913,7 @@ Wieszk 3D
 
 
 <!-- =====================================================
-     SZCZEGÓŁY PRODUKTU
+     SZCZEGÓŁY PRODUKTU — IKEA SKADIS
 ===================================================== -->
 
 <section id="product-hook" class="page">
@@ -847,21 +922,18 @@ Wieszk 3D
 
         <div class="product-detail">
 
-            <!-- ================= GALERIA ================= -->
+
+            <!-- GALERIA -->
 
             <div class="product-gallery">
-
-                <!-- GŁÓWNE ZDJĘCIE -->
 
                 <img
                     id="mainProductImage"
                     src="./wspornik.jpg"
-                    alt="Wspornik ścienny 3D"
+                    alt="IKEA SKADIS Wieszak 3D"
                     class="main-product-image"
                     onerror="imageError(this)"
                 >
-
-                <!-- MINIATURY -->
 
                 <div class="gallery-thumbnails">
 
@@ -886,7 +958,7 @@ Wieszk 3D
             </div>
 
 
-            <!-- ================= INFORMACJE ================= -->
+            <!-- INFORMACJE -->
 
             <div class="product-info">
 
@@ -895,13 +967,11 @@ Wieszk 3D
                 </div>
 
                 <h2>
-
                     IKEA SKADIS<br>
 
                     <span style="color:#7c3cff;">
-                        Wieszk 3D
+                        Wieszak 3D
                     </span>
-
                 </h2>
 
                 <p class="product-description">
@@ -961,7 +1031,163 @@ Wieszk 3D
                 </div>
 
                 <div class="product-price">
-                    19.99 zł
+                    39,99 zł
+                </div>
+
+                <a
+                    href="#"
+                    class="btn primary"
+                    onclick="showPage('contact'); return false;"
+                >
+                    Zamów produkt →
+                </a>
+
+                <br>
+
+                <a
+                    href="#"
+                    class="back-link"
+                    onclick="showPage('shop'); return false;"
+                >
+                    ← Wróć do sklepu
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     SZCZEGÓŁY PRODUKTU — KUKIRIN G4
+===================================================== -->
+
+<section id="product-kukirin" class="page">
+
+    <div class="content">
+
+        <div class="product-detail">
+
+
+            <!-- ================= GALERIA KUKIRIN ================= -->
+
+            <div class="product-gallery">
+
+                <img
+                    id="mainKukirinImage"
+                    src="./kukiring41.jpg"
+                    alt="KuKirin G4"
+                    class="main-product-image"
+                    onerror="imageError(this)"
+                >
+
+                <div class="gallery-thumbnails">
+
+                    <!-- ZDJĘCIE 1 -->
+
+                    <img
+                        src="./kukiring41.jpg"
+                        alt="KuKirin G4 - zdjęcie 1"
+                        class="gallery-thumb active"
+                        onclick="changeKukirinImage(this)"
+                        onerror="imageError(this)"
+                    >
+
+                    <!-- ZDJĘCIE 2 -->
+
+                    <img
+                        src="./kukiring42.jpg"
+                        alt="KuKirin G4 - zdjęcie 2"
+                        class="gallery-thumb"
+                        onclick="changeKukirinImage(this)"
+                        onerror="imageError(this)"
+                    >
+
+                    <!-- ZDJĘCIE 3 -->
+
+                    <img
+                        src="./kukiring43.jpg"
+                        alt="KuKirin G4 - zdjęcie 3"
+                        class="gallery-thumb"
+                        onclick="changeKukirinImage(this)"
+                        onerror="imageError(this)"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= INFORMACJE ================= -->
+
+            <div class="product-info">
+
+                <div class="product-category">
+                    LayerLab • Druk 3D
+                </div>
+
+                <h2>
+                    KuKirin G4<br>
+
+                    <span style="color:#7c3cff;">
+                        Produkt 3D
+                    </span>
+                </h2>
+
+                <p class="product-description">
+
+                    Produkt wykonany w technologii druku 3D,
+                    inspirowany modelem KuKirin G4.
+
+                    Nowoczesny wygląd oraz dokładne wykonanie
+                    sprawiają, że produkt świetnie prezentuje się
+                    jako element kolekcji.
+
+                </p>
+
+                <p class="product-description">
+
+                    Produkt wykonywany jest na zamówienie
+                    z wykorzystaniem technologii druku 3D.
+
+                    Kolor może zostać ustalony indywidualnie,
+                    zależnie od dostępności materiału.
+
+                </p>
+
+                <div class="product-features">
+
+                    <div>
+                        ✓
+                        <span>Technologia:</span>
+                        druk 3D
+                    </div>
+
+                    <div>
+                        ✓
+                        <span>Materiał:</span>
+                        tworzywo do druku 3D
+                    </div>
+
+                    <div>
+                        ✓
+                        <span>Kolor:</span>
+                        do ustalenia
+                    </div>
+
+                    <div>
+                        ✓
+                        <span>Wykonanie:</span>
+                        na zamówienie
+                    </div>
+
+                </div>
+
+                <div class="product-price">
+                    39,99 zł
                 </div>
 
                 <a
@@ -1020,7 +1246,6 @@ Wieszk 3D
                 wiktorgit0@wp.pl
             </p>
 
-            
             <p>
                 📦
                 <strong>Zamówienia:</strong>
@@ -1052,30 +1277,38 @@ Wieszk 3D
 
 <script>
 
+
 /* ================= ZMIANA STRONY ================= */
 
 function showPage(pageId) {
 
-    const pages = document.querySelectorAll("#home, .page");
+    const pages =
+        document.querySelectorAll("#home, .page");
 
     pages.forEach(function(page) {
+
         page.classList.remove("active");
+
     });
 
-    const selectedPage = document.getElementById(pageId);
+    const selectedPage =
+        document.getElementById(pageId);
 
     if (selectedPage) {
+
         selectedPage.classList.add("active");
+
     }
 
     window.scrollTo({
         top: 0,
         behavior: "smooth"
     });
+
 }
 
 
-/* ================= ZMIANA ZDJĘCIA ================= */
+/* ================= IKEA SKADIS — GALERIA ================= */
 
 function changeProductImage(element) {
 
@@ -1086,20 +1319,46 @@ function changeProductImage(element) {
         return;
     }
 
-    /*
-     * Pobieramy dokładnie adres klikniętej miniatury.
-     */
+    mainImage.src = element.src;
+
+    const thumbnails =
+        document.querySelectorAll("#product-hook .gallery-thumb");
+
+    thumbnails.forEach(function(thumb) {
+
+        thumb.classList.remove("active");
+
+    });
+
+    element.classList.add("active");
+
+}
+
+
+/* ================= KUKIRIN — GALERIA ================= */
+
+function changeKukirinImage(element) {
+
+    const mainImage =
+        document.getElementById("mainKukirinImage");
+
+    if (!mainImage) {
+        return;
+    }
 
     mainImage.src = element.src;
 
     const thumbnails =
-        document.querySelectorAll(".gallery-thumb");
+        document.querySelectorAll("#product-kukirin .gallery-thumb");
 
     thumbnails.forEach(function(thumb) {
+
         thumb.classList.remove("active");
+
     });
 
     element.classList.add("active");
+
 }
 
 
@@ -1107,27 +1366,28 @@ function changeProductImage(element) {
 
 function imageError(image) {
 
-    /*
-     * Jeśli plik nie istnieje,
-     * pokazujemy ciemne tło zamiast
-     * ikony uszkodzonego obrazka.
-     */
-
     image.style.background = "#171020";
 
-    image.style.objectFit =  "contain";
+    image.style.objectFit = "contain";
 
     image.removeAttribute("src");
 
     image.alt =
         "Nie znaleziono pliku zdjęcia";
+
 }
 
-document.addEventListener("DOMContentLoaded", function() {
 
-    showPage("home");
+/* ================= START ================= */
 
-});
+document.addEventListener(
+    "DOMContentLoaded",
+    function() {
+
+        showPage("home");
+
+    }
+);
 
 </script>
 
