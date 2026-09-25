@@ -1117,20 +1117,15 @@ function imageError(image) {
      * ikony uszkodzonego obrazka.
      */
 
-    image.style.background =
-        "#171020";
+    image.style.background = "#171020";
 
-    image.style.objectFit =
-        "contain";
+    image.style.objectFit =  "contain";
 
     image.removeAttribute("src");
 
     image.alt =
         "Nie znaleziono pliku zdjęcia";
 }
-
-
-/* ================= START ================= */
 
 document.addEventListener("DOMContentLoaded", function() {
 
